@@ -1,6 +1,6 @@
 # A Note From Tyler
 
-I went ahead and used create-react-app to spin up this project. However, I prefer npm at the current time so I used that instead of yarn. 
+I went ahead and used create-react-app to spin up this project. However, I prefer npm at the current time so I used that instead of yarn. Just run `npm install` and it should be ready to run!
 
 `.env` files have been included with this submission to allow for both development and production builds. Normally these would not be included as they may contain private data.
 
