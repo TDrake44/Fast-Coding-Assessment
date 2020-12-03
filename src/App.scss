@@ -1,0 +1,95 @@
+@import "./styles/grid";
+@import "./styles/mixins";
+@import "./styles/variables";
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 250px;
+}
+
+body {
+  color: $black;
+  margin: 0;
+}
+
+.header {
+  background-color: $dark-grey;
+  height: 5.5rem;
+  display: flex;
+  align-items: center;
+  font-size: $font-xlarge;
+  color: $white;
+  padding: 0 1rem;
+
+  h1 {
+    font-size: $font-xlarge;
+    margin: 0 0.1rem 0 0;
+  }
+
+  .title-link {
+    text-decoration: none;
+    color: $white;
+
+    &:hover {
+      .slider {
+        width: 100%;
+      }
+    }
+
+    .slider {
+      display: block;
+      width: 20%;
+      height: 0.3rem;
+      background: $light-blue;
+      transition: width 0.5s ease;
+      border-radius: 0.3rem;
+    }
+  }
+
+  .home-link {
+    margin-left: auto;
+    color: $white;
+    font-size: $font-medium-up;
+  }
+
+  @include small {
+    display: flex;
+    justify-content: center;
+    height: 4rem;
+
+    h1 {
+      font-size: calc(1.2rem + 1.5vmin);
+      text-align: center;
+    }
+
+    .home-link {
+      display: none;
+    }
+
+    .title-link {
+      &:hover {
+        .slider {
+          width: 70%;
+        }
+      }
+
+      .slider {
+        width: 100%;
+        margin: auto;
+      }
+    }
+  }
+}
+
+.content {
+  padding: 0 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: $blue;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

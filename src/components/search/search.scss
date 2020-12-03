@@ -1,0 +1,26 @@
+@import "../../styles/mixins";
+
+.search {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+
+  input {
+    padding: 0.5rem;
+    height: 2rem;
+
+    @include small {
+      max-width: 10rem;
+    }
+  }
+
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-decoration {
+    margin-top: 1px;
+  }
+
+  button {
+    height: 2rem;
+    margin-left: 0.2rem;
+  }
+}

@@ -1,0 +1,73 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.bag {
+  max-width: 30rem;
+  margin: auto;
+
+  &.show {
+    .trigger {
+      &:after {
+        content: "\2212";
+      }
+    }
+
+    .content {
+      display: block;
+    }
+  }
+
+  .trigger {
+    background-color: $dark-grey;
+    color: $white;
+    cursor: pointer;
+    padding: 0.5rem;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: $font-medium-up;
+
+    &:after {
+      content: "\002B";
+      color: $white;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+  }
+
+  .trigger:hover {
+    background: $blue;
+  }
+
+  .content {
+    padding: 0.5rem;
+    display: none;
+    overflow: hidden;
+    background: $lighter-grey;
+
+    .movie {
+      display: block;
+      margin: 0.5rem 0;
+
+      @include small {
+        font-size: calc(0.5rem + 1.5vmin);
+      }
+    }
+
+    button {
+      outline: none;
+      border: none;
+      background: none;
+      padding: 0;
+      font-size: 100%;
+      text-decoration: underline;
+      cursor: pointer;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+}

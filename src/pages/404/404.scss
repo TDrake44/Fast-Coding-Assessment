@@ -1,0 +1,12 @@
+@import "../../styles/mixins";
+
+.no-page {
+  font-size: 2rem;
+  max-width: 15rem;
+  text-align: center;
+  margin: 5rem auto;
+
+  @include small {
+    font-size: calc(1.2rem + 2vmin);
+  }
+}
